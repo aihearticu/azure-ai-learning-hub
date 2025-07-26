@@ -1,0 +1,152 @@
+# Azure Credentials and Secrets
+.env
+.env.local
+.env.*.local
+*.pfx
+*.key
+*.pem
+*.cer
+appsettings.json
+appsettings.*.json
+local.settings.json
+config.json
+secrets.json
+
+# Azure specific
+*.azureauth
+.azure/
+azureProfile.json
+
+# API Keys and Tokens
+**/apikeys.txt
+**/tokens.txt
+**/*_key.txt
+**/*_secret.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+**/Properties/launchSettings.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Data files (potentially sensitive)
+*.csv
+*.xlsx
+*.xls
+*.json
+!package.json
+!tsconfig.json
+!composer.json
+!bower.json
+!template.json
+!sample-*.json
+!example-*.json
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.pdf
+*.mp4
+*.avi
+*.mov
+
+# Model files
+*.pkl
+*.h5
+*.model
+*.onnx
+*.pb
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+*.lock
+!package-lock.json
+!yarn.lock
+!composer.lock
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tfvars
+!example.tfvars
+!sample.tfvars
+
+# Claude specific
+.claude/
+CLAUDE.md
+MULTI_AGENT_PLAN.md
+
+# Custom excludes for learning materials
+!resources/sample-data/.gitkeep
+!resources/images/.gitkeep
+!resources/datasets/.gitkeep
+resources/sample-data/*
+resources/datasets/*
+!resources/datasets/README.md

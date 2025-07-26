@@ -1,0 +1,41 @@
+# Azure AI Services SDK
+azure-ai-textanalytics>=5.3.0
+azure-cognitiveservices-vision-computervision>=0.9.0
+azure-cognitiveservices-speech>=1.34.0
+azure-ai-formrecognizer>=3.3.0
+azure-search-documents>=11.4.0
+azure-ai-translation-text>=1.0.0
+azure-ai-language-questionanswering>=1.1.0
+azure-ai-language-conversations>=1.1.0
+
+# Azure Core & Identity
+azure-identity>=1.15.0
+azure-core>=1.29.0
+azure-storage-blob>=12.19.0
+azure-keyvault-secrets>=4.7.0
+
+# OpenAI Integration
+openai>=1.0.0
+tiktoken>=0.5.0
+
+# Utilities
+python-dotenv>=1.0.0
+requests>=2.31.0
+aiohttp>=3.9.0
+numpy>=1.24.0
+pandas>=2.0.0
+Pillow>=10.0.0
+
+# Development Tools
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+pytest-cov>=4.1.0
+black>=23.0.0
+flake8>=6.0.0
+isort>=5.12.0
+
+# Jupyter Support (optional)
+jupyter>=1.0.0
+ipykernel>=6.25.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
