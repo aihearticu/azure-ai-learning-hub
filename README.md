@@ -148,12 +148,27 @@ azure-ai-learning-hub/
 
 ## 📈 Progress Tracking
 
-Track your learning progress:
-- [ ] Complete Fundamentals Path
-- [ ] Build 5 Computer Vision Projects
-- [ ] Implement 3 NLP Solutions
-- [ ] Deploy 1 Production System
+### Current Progress: 15% Complete
+- [x] AI Services Fundamentals - Containers (Lab 1)
+- [x] Knowledge Mining - Custom Skills (Lab 2)
+- [x] Knowledge Mining - Push API Optimization (Lab 7)
+- [x] Knowledge Mining - Vector Search (Lab 10)
+- [x] Document Intelligence - Prebuilt Models (Lab 3)
+- [ ] Complete Computer Vision Path (0/8 labs)
+- [ ] Complete Natural Language Path (1/9 labs)
+- [ ] Complete Generative AI Path (0/6 labs)
 - [ ] Pass AI-102 Certification
+
+### Certification Coverage
+| Exam Area | Coverage | Status |
+|-----------|----------|--------|
+| Plan & Manage | 20% | 🟡 In Progress |
+| Computer Vision | 0% | ⬜ Not Started |
+| Natural Language | 11% | 🟡 Started |
+| Knowledge Mining | 37.5% | 🟢 Good Progress |
+| Document Intelligence | 40% | 🟢 Good Progress |
+| Generative AI | 0% | ⬜ Not Started |
+| Agentic Solutions | 0% | ⬜ Not Started |
 
 ## 🤝 Contributing
 
