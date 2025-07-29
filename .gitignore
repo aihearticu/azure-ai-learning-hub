@@ -44,3 +44,7 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Audio files (generated)
+output.wav
+*.mp3

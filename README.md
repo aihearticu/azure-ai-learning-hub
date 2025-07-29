@@ -22,6 +22,13 @@ This repository contains hands-on lab work completed while following the Microso
 - **Key Learning**: Built Bicep templates with parameters, variables, and modules for Azure resource deployment
 - **Implementation**: Progressive exercises from basic resources to modular architecture
 
+### Lab 07: Speech Service
+- **Status**: ✅ Completed (2025-07-29)
+- **Technologies**: Azure AI Speech Services, Python SDK
+- **Key Learning**: Implemented speech-to-text and text-to-speech with real microphone support
+- **Implementation**: Speaking clock app with both file-based and live audio capabilities
+- **Special Achievement**: Successfully configured cross-platform audio (WSL files + Windows microphone)
+
 ## 🚀 Repository Structure
 
 ```
@@ -43,6 +50,17 @@ Azure-AI-Learning-Modules/
 │   ├── exercises/              # Progressive exercises
 │   ├── deployments/            # Deployment scripts
 │   └── docs/                   # Documentation
+├── 07-Speech-Service/
+│   ├── README.md
+│   ├── TROUBLESHOOTING.md      # Common issues and solutions
+│   ├── requirements.txt        # Python dependencies
+│   ├── .env.example           # Template for credentials
+│   ├── src/
+│   │   ├── speaking-clock.py   # File-based version
+│   │   ├── speaking-clock-mic.py # Microphone version
+│   │   ├── time.wav           # Sample input audio
+│   │   └── output.wav         # Generated speech
+│   └── venv/                  # Python virtual environment
 ├── memory/                      # Learning progress tracking
 └── README.md                    # This file
 ```
