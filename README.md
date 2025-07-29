@@ -16,6 +16,12 @@ This repository contains hands-on lab work completed while following the Microso
 - **Key Learning**: Built interactive translation application supporting 137 languages with automatic source detection
 - **Implementation**: Python SDK with real-time translation capabilities
 
+### Lab 07: Bicep Infrastructure
+- **Status**: ✅ Completed (2025-07-29)
+- **Technologies**: Azure Bicep, Infrastructure as Code
+- **Key Learning**: Built Bicep templates with parameters, variables, and modules for Azure resource deployment
+- **Implementation**: Progressive exercises from basic resources to modular architecture
+
 ## 🚀 Repository Structure
 
 ```
@@ -27,6 +33,16 @@ Azure-AI-Learning-Modules/
 ├── 06-Translate-Text/
 │   ├── README.md
 │   └── src/                    # Translation app
+├── 07-Bicep-Infrastructure/
+│   ├── README.md
+│   ├── src/                    # Bicep templates
+│   │   ├── main.bicep          # Basic version
+│   │   ├── main-with-params.bicep  # Parameterized
+│   │   ├── main-modular.bicep  # With modules
+│   │   └── modules/            # Reusable modules
+│   ├── exercises/              # Progressive exercises
+│   ├── deployments/            # Deployment scripts
+│   └── docs/                   # Documentation
 ├── memory/                      # Learning progress tracking
 └── README.md                    # This file
 ```
@@ -36,11 +52,16 @@ Azure-AI-Learning-Modules/
 - **Azure AI Services**
   - Azure AI Language
   - Azure AI Translator
+- **Azure Infrastructure**
+  - Azure Bicep (Infrastructure as Code)
+  - Azure Resource Manager
 - **Programming Languages**
   - Python 3.x
+  - Bicep DSL
 - **SDKs**
   - azure-ai-textanalytics
   - azure-ai-translation-text
+  - Azure CLI
 
 ## 📋 Upcoming Labs
 

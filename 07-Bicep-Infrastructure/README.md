@@ -19,11 +19,13 @@ This module covers the fundamentals of Azure Bicep, an Infrastructure as Code (I
 ├── src/
 │   ├── main.bicep                    # Initial hardcoded version
 │   ├── main-with-params.bicep        # Version with parameters and variables
-│   └── main-modular.bicep            # Modular version (future exercise)
+│   ├── main-modular.bicep            # Modular version with refactored structure
+│   └── modules/                      # Reusable Bicep modules
+│       └── appService.bicep          # App Service module
 ├── exercises/
 │   ├── 01-basic-resources.bicep     # Exercise 1: Basic resource deployment
 │   ├── 02-parameters-variables.bicep # Exercise 2: Add parameters and variables
-│   └── 03-conditions-loops.bicep    # Exercise 3: Advanced features
+│   └── 03-refactor-with-modules.bicep # Exercise 3: Refactor using modules
 ├── deployments/
 │   ├── deploy-dev.sh                 # Development deployment script
 │   └── deploy-prod.sh                # Production deployment script
@@ -54,6 +56,11 @@ This module covers the fundamentals of Azure Bicep, an Infrastructure as Code (I
 - `resourceGroup()` - Access resource group properties
 - String manipulation functions
 
+### 5. Modules
+- Breaking down templates into reusable components
+- Module parameters and outputs
+- Organizing complex infrastructure
+
 ## Exercise Progress
 
 ### Exercise 1: Basic Resources ✅
@@ -69,20 +76,32 @@ Enhanced with:
 - Environment type parameter (prod/nonprod)
 - Conditional SKU selection
 
-### Exercise 3: Advanced Features (Upcoming)
-Will cover:
-- Modules
-- Loops
-- Outputs
-- Dependencies
+### Exercise 3: Refactor with Modules ✅
+Refactored template to use modules:
+- Created `appService.bicep` module
+- Moved App Service resources to module
+- Maintained parameter flexibility
+- Added module outputs
 
 ## Deployment Commands
 
 ### Deploy to Development
 ```bash
+# Basic version
+az deployment group create \
+  --name main-dev \
+  --template-file src/main.bicep
+
+# With parameters
 az deployment group create \
   --name main-dev \
   --template-file src/main-with-params.bicep \
+  --parameters environmentType=nonprod
+
+# Modular version
+az deployment group create \
+  --name main-dev \
+  --template-file src/main-modular.bicep \
   --parameters environmentType=nonprod
 ```
 
@@ -90,7 +109,7 @@ az deployment group create \
 ```bash
 az deployment group create \
   --name main-prod \
-  --template-file src/main-with-params.bicep \
+  --template-file src/main-modular.bicep \
   --parameters environmentType=prod
 ```
 
@@ -111,6 +130,12 @@ az deployment group create \
    - Leverage `uniqueString()` for globally unique names
    - Separate concerns with modules
    - Use variables for computed values
+
+4. **Module Benefits**
+   - Reusable infrastructure components
+   - Better organization for complex deployments
+   - Clearer separation of resources
+   - Easier testing and maintenance
 
 ## Resources
 - [Bicep Documentation](https://docs.microsoft.com/azure/azure-resource-manager/bicep/)
