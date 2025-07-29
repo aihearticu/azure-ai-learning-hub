@@ -29,6 +29,13 @@ This repository contains hands-on lab work completed while following the Microso
 - **Implementation**: Speaking clock app with both file-based and live audio capabilities
 - **Special Achievement**: Successfully configured cross-platform audio (WSL files + Windows microphone)
 
+### Lab 08: Speech Translation
+- **Status**: ✅ Completed (2025-07-29)
+- **Technologies**: Azure AI Speech Translation, Multi-language synthesis
+- **Key Learning**: Real-time speech translation from English to French, Spanish, and Hindi
+- **Implementation**: Translated "Where is the station?" with native voice synthesis for each language
+- **Special Features**: Both file-based and microphone input with language-specific neural voices
+
 ## 🚀 Repository Structure
 
 ```
@@ -60,6 +67,17 @@ Azure-AI-Learning-Modules/
 │   │   ├── speaking-clock-mic.py # Microphone version
 │   │   ├── time.wav           # Sample input audio
 │   │   └── output.wav         # Generated speech
+│   └── venv/                  # Python virtual environment
+├── 08-Speech-Translation/
+│   ├── README.md
+│   ├── requirements.txt
+│   ├── .env.example
+│   ├── src/
+│   │   ├── station.wav        # "Where is the station?"
+│   │   ├── translator.py      # Interactive translator
+│   │   ├── simple-translator.py # Automated demo
+│   │   ├── translator-mic.py  # Microphone version
+│   │   └── translated_*.wav   # Generated translations
 │   └── venv/                  # Python virtual environment
 ├── memory/                      # Learning progress tracking
 └── README.md                    # This file

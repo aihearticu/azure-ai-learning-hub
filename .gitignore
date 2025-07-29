@@ -47,4 +47,5 @@ Thumbs.db
 
 # Audio files (generated)
 output.wav
+translated_*.wav
 *.mp3
