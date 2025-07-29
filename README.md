@@ -36,6 +36,15 @@ This repository contains hands-on lab work completed while following the Microso
 - **Implementation**: Translated "Where is the station?" with native voice synthesis for each language
 - **Special Features**: Both file-based and microphone input with language-specific neural voices
 
+### Lab 09: Bicep Conditions and Loops
+- **Status**: ✅ Completed (2025-07-29)
+- **Technologies**: Azure Bicep, Infrastructure as Code
+- **Key Learning**: Conditional deployments and loop-based multi-region resource creation
+- **Implementation**: 
+  - Conditions: Deploy audit resources only in Production environments
+  - Loops: Deploy SQL databases to multiple Azure regions using array parameters
+- **Special Achievement**: Successfully deployed databases to West US and East US 2 regions
+
 ## 🚀 Repository Structure
 
 ```
@@ -79,6 +88,9 @@ Azure-AI-Learning-Modules/
 │   │   ├── translator-mic.py  # Microphone version
 │   │   └── translated_*.wav   # Generated translations
 │   └── venv/                  # Python virtual environment
+├── 09-Bicep-Loops/
+│   ├── README.md
+│   └── (Bicep files in parent directory)
 ├── memory/                      # Learning progress tracking
 └── README.md                    # This file
 ```

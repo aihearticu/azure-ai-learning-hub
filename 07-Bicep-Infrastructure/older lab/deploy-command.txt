@@ -1,0 +1,1 @@
+az deployment group create --name "bicep-sql-deploy" --resource-group "learn-a1f925d6-2479-4334-8988-141211ac7fb8" --template-file "main.bicep" --parameters "@main.parameters.dev.json"

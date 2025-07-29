@@ -1,0 +1,96 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mslearn-ai-services", "mslearn-ai-services", "{5F17D4BF-8729-6B04-8EA3-4B4CBD87978F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mslearn-knowledge-mining", "mslearn-knowledge-mining", "{6CD680D2-E240-EC8D-9BA7-25A7759CBF99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Labfiles", "Labfiles", "{854CA156-186C-E5C6-983F-0232054ED943}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05-implement-content-safety", "05-implement-content-safety", "{3376F797-AFEA-5E76-981B-E6E1769A5B90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prompt_shield", "mslearn-ai-services\Labfiles\05-implement-content-safety\C-Sharp\prompt_shield.csproj", "{70E9E280-3B0D-334D-B0F8-73580302649B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Labfiles", "Labfiles", "{FBE1A2B8-B41A-BDDF-1EAE-644796F72F72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07-exercise-add-to-index-use-push-api", "07-exercise-add-to-index-use-push-api", "{86C33E84-266D-64C2-5A1E-0DEEC2A7AE17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimizeDataIndexing", "mslearn-knowledge-mining\Labfiles\07-exercise-add-to-index-use-push-api\OptimizeDataIndexing\OptimizeDataIndexing.csproj", "{4335390D-093E-B04A-80C9-DB8274FB7DD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-ai-services-security", "02-ai-services-security", "{780FC901-85F9-31DF-D406-C41CBB642FD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C-Sharp", "C-Sharp", "{6F01C079-B8FE-10A1-A6D2-4C07761593D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "keyvault_client", "mslearn-ai-services\Labfiles\02-ai-services-security\C-Sharp\keyvault_client\keyvault_client.csproj", "{1AC1787B-C724-702B-B37D-C4BC72EB157C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-use-azure-ai-services", "01-use-azure-ai-services", "{B4C0FCB2-0E2F-AEB8-0303-69E58C72B278}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C-Sharp", "C-Sharp", "{DE2414EA-88F8-9EAA-77F2-AB527C0A25C6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sdk-client", "mslearn-ai-services\Labfiles\01-use-azure-ai-services\C-Sharp\sdk-client\sdk-client.csproj", "{7B00AE34-89BD-D791-B43D-D55A53DAC272}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rest_client", "mslearn-ai-services\Labfiles\01-use-azure-ai-services\C-Sharp\rest-client\rest_client.csproj", "{865D2B8C-EA71-9E52-0DD6-1DDFE2FF0E18}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-azure-search", "01-azure-search", "{A36BC1F4-760E-8E0F-3725-0FFB9BCCC80A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "C-Sharp", "C-Sharp", "{07AF14EF-111F-3E35-BEBB-29A0B9FA8F56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "search-client", "mslearn-knowledge-mining\Labfiles\01-azure-search\C-Sharp\margies-travel\search-client.csproj", "{A9D6DFBB-5F05-F53C-C4CD-B0825AEFA35F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70E9E280-3B0D-334D-B0F8-73580302649B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70E9E280-3B0D-334D-B0F8-73580302649B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70E9E280-3B0D-334D-B0F8-73580302649B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70E9E280-3B0D-334D-B0F8-73580302649B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4335390D-093E-B04A-80C9-DB8274FB7DD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4335390D-093E-B04A-80C9-DB8274FB7DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4335390D-093E-B04A-80C9-DB8274FB7DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4335390D-093E-B04A-80C9-DB8274FB7DD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AC1787B-C724-702B-B37D-C4BC72EB157C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AC1787B-C724-702B-B37D-C4BC72EB157C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AC1787B-C724-702B-B37D-C4BC72EB157C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AC1787B-C724-702B-B37D-C4BC72EB157C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B00AE34-89BD-D791-B43D-D55A53DAC272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B00AE34-89BD-D791-B43D-D55A53DAC272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B00AE34-89BD-D791-B43D-D55A53DAC272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B00AE34-89BD-D791-B43D-D55A53DAC272}.Release|Any CPU.Build.0 = Release|Any CPU
+		{865D2B8C-EA71-9E52-0DD6-1DDFE2FF0E18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{865D2B8C-EA71-9E52-0DD6-1DDFE2FF0E18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{865D2B8C-EA71-9E52-0DD6-1DDFE2FF0E18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{865D2B8C-EA71-9E52-0DD6-1DDFE2FF0E18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9D6DFBB-5F05-F53C-C4CD-B0825AEFA35F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9D6DFBB-5F05-F53C-C4CD-B0825AEFA35F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9D6DFBB-5F05-F53C-C4CD-B0825AEFA35F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9D6DFBB-5F05-F53C-C4CD-B0825AEFA35F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{854CA156-186C-E5C6-983F-0232054ED943} = {5F17D4BF-8729-6B04-8EA3-4B4CBD87978F}
+		{3376F797-AFEA-5E76-981B-E6E1769A5B90} = {854CA156-186C-E5C6-983F-0232054ED943}
+		{70E9E280-3B0D-334D-B0F8-73580302649B} = {3376F797-AFEA-5E76-981B-E6E1769A5B90}
+		{FBE1A2B8-B41A-BDDF-1EAE-644796F72F72} = {6CD680D2-E240-EC8D-9BA7-25A7759CBF99}
+		{86C33E84-266D-64C2-5A1E-0DEEC2A7AE17} = {FBE1A2B8-B41A-BDDF-1EAE-644796F72F72}
+		{4335390D-093E-B04A-80C9-DB8274FB7DD5} = {86C33E84-266D-64C2-5A1E-0DEEC2A7AE17}
+		{780FC901-85F9-31DF-D406-C41CBB642FD4} = {854CA156-186C-E5C6-983F-0232054ED943}
+		{6F01C079-B8FE-10A1-A6D2-4C07761593D6} = {780FC901-85F9-31DF-D406-C41CBB642FD4}
+		{1AC1787B-C724-702B-B37D-C4BC72EB157C} = {6F01C079-B8FE-10A1-A6D2-4C07761593D6}
+		{B4C0FCB2-0E2F-AEB8-0303-69E58C72B278} = {854CA156-186C-E5C6-983F-0232054ED943}
+		{DE2414EA-88F8-9EAA-77F2-AB527C0A25C6} = {B4C0FCB2-0E2F-AEB8-0303-69E58C72B278}
+		{7B00AE34-89BD-D791-B43D-D55A53DAC272} = {DE2414EA-88F8-9EAA-77F2-AB527C0A25C6}
+		{865D2B8C-EA71-9E52-0DD6-1DDFE2FF0E18} = {DE2414EA-88F8-9EAA-77F2-AB527C0A25C6}
+		{A36BC1F4-760E-8E0F-3725-0FFB9BCCC80A} = {FBE1A2B8-B41A-BDDF-1EAE-644796F72F72}
+		{07AF14EF-111F-3E35-BEBB-29A0B9FA8F56} = {A36BC1F4-760E-8E0F-3725-0FFB9BCCC80A}
+		{A9D6DFBB-5F05-F53C-C4CD-B0825AEFA35F} = {07AF14EF-111F-3E35-BEBB-29A0B9FA8F56}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09498EC3-4C10-47EE-BD3F-F9B50FE8AFEE}
+	EndGlobalSection
+EndGlobal
