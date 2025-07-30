@@ -49,3 +49,7 @@ Thumbs.db
 output.wav
 translated_*.wav
 *.mp3
+
+# Business Solutions - PRIVATE
+Azure-Business-Solutions/
+**/Azure-Business-Solutions/
