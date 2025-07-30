@@ -1,13 +1,15 @@
 # Bicep Loops Exercise
 
 ## Overview
-This module demonstrates how to use loops in Azure Bicep to deploy multiple resources based on array parameters. We implemented a multi-region database deployment using Bicep's `for` expression.
+This module demonstrates how to use loops in Azure Bicep to deploy multiple resources based on array parameters. We implemented a multi-region deployment including databases, virtual networks, and enhanced output loops.
 
 ## Learning Objectives
 - Use array parameters to define multiple deployment configurations
 - Implement copy loops with the `for` expression
 - Deploy resources to multiple Azure regions
-- Output arrays from loop deployments
+- Use variable loops to transform parameter data
+- Create complex output loops with object structures
+- Deploy virtual networks with dynamic subnet configuration
 
 ## Key Concepts
 
@@ -31,9 +33,37 @@ module databases 'modules/database.bicep' = [for location in locations: {
 }]
 ```
 
-### 3. Output Arrays
+### 3. Variable Loops
 ```bicep
-output serverNames array = [for i in range(0, length(locations)): databases[i].outputs.serverName]
+var subnetProperties = [for subnet in subnets: {
+  name: subnet.name
+  properties: {
+    addressPrefix: subnet.ipAddressRange
+  }
+}]
+```
+
+### 4. Resource Loops
+```bicep
+resource virtualNetworks 'Microsoft.Network/virtualNetworks@2024-05-01' = [for location in locations: {
+  name: 'teddybear-${location}'
+  location: location
+  properties: {
+    addressSpace: {
+      addressPrefixes: [virtualNetworkAddressPrefix]
+    }
+    subnets: subnetProperties
+  }
+}]
+```
+
+### 5. Complex Output Loops
+```bicep
+output serverInfo array = [for i in range(0, length(locations)): {
+  name: databases[i].outputs.serverName
+  location: databases[i].outputs.location
+  fullyQualifiedDomainName: databases[i].outputs.serverFullyQualifiedDomainName
+}]
 ```
 
 ## Implementation Details
@@ -45,14 +75,26 @@ output serverNames array = [for i in range(0, length(locations)): databases[i].o
 
 ### Key Features
 - Deploys SQL servers and databases to multiple regions
+- Creates virtual networks with frontend and backend subnets
 - Uses unique naming convention: `teddy${location}${uniqueString}`
 - Conditional audit storage accounts (Production only)
 - Modular design for reusability
+- Enhanced outputs with fully qualified domain names
 
 ## Deployment Results
 Successfully deployed:
-- **West US**: teddywestuslzng4pw7iumfa
-- **East US 2**: teddyeastus2lzng4pw7iumfa
+
+### SQL Servers
+- **West US**: teddywestuslzng4pw7iumfa.database.windows.net
+- **East US 2**: teddyeastus2lzng4pw7iumfa.database.windows.net
+
+### Virtual Networks
+- **West US**: teddybear-westus (10.10.0.0/16)
+  - Frontend subnet: 10.10.5.0/24
+  - Backend subnet: 10.10.10.0/24
+- **East US 2**: teddybear-eastus2 (10.10.0.0/16)
+  - Frontend subnet: 10.10.5.0/24
+  - Backend subnet: 10.10.10.0/24
 
 ## Challenges & Solutions
 
@@ -94,6 +136,20 @@ az sql server list \
   --query "[].{name:name, location:location}" \
   -o table
 ```
+
+## Exercise Progression
+
+### Exercise 1: Basic Loops
+- Deploy resources to multiple regions
+- Use module loops for consistency
+
+### Exercise 2: Variable Loops
+- Transform parameter arrays into resource properties
+- Deploy virtual networks with dynamic subnets
+
+### Exercise 3: Output Loops
+- Create complex output structures
+- Include computed properties like FQDNs
 
 ## Next Steps
 - Experiment with more complex loop scenarios

@@ -2,6 +2,10 @@
 
 This repository contains hands-on lab work completed while following the Microsoft Learn AI Language path.
 
+## 📈 Learning Progress
+
+**9 of 24 Modules Completed (37.5%)** - See [LEARNING_PROGRESS.md](./LEARNING_PROGRESS.md) for detailed tracking
+
 ## 📚 Completed Labs
 
 ### Lab 05: Extract Custom Entities

@@ -68,3 +68,4 @@ resource sqlServerAudit 'Microsoft.Sql/servers/auditingSettings@2024-05-01-previ
 output serverName string = sqlServer.name
 output location string = location
 output databaseName string = sqlDatabase.name
+output serverFullyQualifiedDomainName string = sqlServer.properties.fullyQualifiedDomainName
