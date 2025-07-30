@@ -1,0 +1,4 @@
+python-dotenv
+azure-identity
+semantic-kernel
+azure-ai-agents>=1.1.0b1
