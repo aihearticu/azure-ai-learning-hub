@@ -1,6 +1,6 @@
 # Azure AI Engineer Learning Progress
 
-## 📊 Overall Progress: 10/24 Modules Completed (41.7%)
+## 📊 Overall Progress: 12/24 Modules Completed (50%)
 
 ## 🎯 Learning Path: [AI-102: Azure AI Engineer](https://learn.microsoft.com/en-us/training/paths/azure-ai-engineer/)
 
@@ -56,6 +56,26 @@
   - Inter-module dependencies via outputs
   - Clean separation of concerns
 
+### Module 11: Semantic Kernel - AI Agents
+- **Date**: 2025-07-30
+- **Key Skills**: Semantic Kernel SDK, AI Agent development, Plugin architecture
+- **Notable Achievement**: Built expense claim agent with custom email plugin
+- **Implementation**: 
+  - Azure OpenAI GPT-4o integration
+  - Custom EmailPlugin for expense submission
+  - Natural language expense processing
+  - Interactive conversation management
+
+### Module 12: Agent Orchestration
+- **Date**: 2025-07-30
+- **Key Skills**: Multi-agent systems, Agent coordination, Conversation strategies
+- **Notable Achievement**: Orchestrated Incident Manager and DevOps Assistant agents
+- **Implementation**: 
+  - Turn-based agent selection strategy
+  - Termination logic for incident resolution
+  - Log analysis and automated response
+  - Collaborative problem-solving between agents
+
 ## 📝 Key Learnings
 
 ### Technical Skills Gained
@@ -63,13 +83,20 @@
    - Speech SDK configuration and usage
    - Language service customization
    - Translation API implementation
+   - Azure OpenAI GPT-4o deployment and usage
 
-2. **Infrastructure as Code**
+2. **AI Agent Development**
+   - Semantic Kernel SDK implementation
+   - Custom plugin architecture
+   - Multi-agent orchestration
+   - Conversation management strategies
+
+3. **Infrastructure as Code**
    - Bicep template development
    - Parameterization and modularization
    - Conditional and loop-based deployments
 
-3. **Cross-Platform Development**
+4. **Cross-Platform Development**
    - WSL and Windows integration
    - Audio device handling across platforms
    - Environment-specific configurations
@@ -116,16 +143,20 @@
 ## 📚 Resources & References
 
 - [Microsoft Learn - AI Language](https://microsoftlearning.github.io/mslearn-ai-language/)
+- [Microsoft Learn - AI Agents](https://microsoftlearning.github.io/mslearn-ai-agents/)
 - [Azure AI Services Documentation](https://docs.microsoft.com/azure/cognitive-services/)
 - [Azure Bicep Documentation](https://docs.microsoft.com/azure/azure-resource-manager/bicep/)
+- [Semantic Kernel Documentation](https://learn.microsoft.com/semantic-kernel/)
 - [GitHub Repository](https://github.com/aihearticu/azure-ai-learning-hub)
 
 ## 🎉 Achievements & Milestones
 
-1. **Multi-Service Integration**: Successfully integrated Speech, Language, and Translation services
+1. **Multi-Service Integration**: Successfully integrated Speech, Language, Translation, and OpenAI services
 2. **Infrastructure Mastery**: Advanced from basic Bicep to complex conditional loops
 3. **Cross-Platform Solutions**: Developed workarounds for WSL limitations
-4. **Real-World Applications**: Built practical tools like speaking clock and translator
+4. **Real-World Applications**: Built practical tools like speaking clock, translator, and expense agent
+5. **AI Agent Architecture**: Implemented both single and multi-agent systems with orchestration
+6. **50% Completion**: Reached halfway point in the Azure AI Engineer learning path!
 
 ---
 
