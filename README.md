@@ -1,143 +1,104 @@
-# Azure AI Learning Modules
+# Azure AI Learning Hub
 
-This repository contains hands-on lab work completed while following the Microsoft Learn AI Language path.
+This repository contains hands-on implementations and documentation from the Microsoft Azure AI Engineer (AI-102) certification journey.
 
 ## 📈 Learning Progress
 
-**9 of 24 Modules Completed (37.5%)** - See [LEARNING_PROGRESS.md](./LEARNING_PROGRESS.md) for detailed tracking
-
-## 📚 Completed Labs
-
-### Lab 05: Extract Custom Entities
-- **Status**: ✅ Completed (2025-07-28)
-- **Technologies**: Azure AI Language, Custom NER
-- **Key Learning**: Built custom entity recognition model to extract ItemForSale, Price, and Location from classified ads
-- **Challenges Solved**: CORS configuration, storage account permissions
-
-### Lab 06: Translate Text
-- **Status**: ✅ Completed (2025-07-28)
-- **Technologies**: Azure AI Translator
-- **Key Learning**: Built interactive translation application supporting 137 languages with automatic source detection
-- **Implementation**: Python SDK with real-time translation capabilities
-
-### Lab 07: Bicep Infrastructure
-- **Status**: ✅ Completed (2025-07-29)
-- **Technologies**: Azure Bicep, Infrastructure as Code
-- **Key Learning**: Built Bicep templates with parameters, variables, and modules for Azure resource deployment
-- **Implementation**: Progressive exercises from basic resources to modular architecture
-
-### Lab 07: Speech Service
-- **Status**: ✅ Completed (2025-07-29)
-- **Technologies**: Azure AI Speech Services, Python SDK
-- **Key Learning**: Implemented speech-to-text and text-to-speech with real microphone support
-- **Implementation**: Speaking clock app with both file-based and live audio capabilities
-- **Special Achievement**: Successfully configured cross-platform audio (WSL files + Windows microphone)
-
-### Lab 08: Speech Translation
-- **Status**: ✅ Completed (2025-07-29)
-- **Technologies**: Azure AI Speech Translation, Multi-language synthesis
-- **Key Learning**: Real-time speech translation from English to French, Spanish, and Hindi
-- **Implementation**: Translated "Where is the station?" with native voice synthesis for each language
-- **Special Features**: Both file-based and microphone input with language-specific neural voices
-
-### Lab 09: Bicep Conditions and Loops
-- **Status**: ✅ Completed (2025-07-29)
-- **Technologies**: Azure Bicep, Infrastructure as Code
-- **Key Learning**: Conditional deployments and loop-based multi-region resource creation
-- **Implementation**: 
-  - Conditions: Deploy audit resources only in Production environments
-  - Loops: Deploy SQL databases to multiple Azure regions using array parameters
-- **Special Achievement**: Successfully deployed databases to West US and East US 2 regions
+**10 of 24 Modules Completed (41.7%)** - See [LEARNING_PROGRESS.md](./LEARNING_PROGRESS.md) for detailed tracking
 
 ## 🚀 Repository Structure
 
 ```
 Azure-AI-Learning-Modules/
-├── 05-Custom-Entity-Extraction/
-│   ├── README.md
-│   ├── TROUBLESHOOTING.md
-│   └── src/                    # Implementation files
-├── 06-Translate-Text/
-│   ├── README.md
-│   └── src/                    # Translation app
-├── 07-Bicep-Infrastructure/
-│   ├── README.md
-│   ├── src/                    # Bicep templates
-│   │   ├── main.bicep          # Basic version
-│   │   ├── main-with-params.bicep  # Parameterized
-│   │   ├── main-modular.bicep  # With modules
-│   │   └── modules/            # Reusable modules
-│   ├── exercises/              # Progressive exercises
-│   ├── deployments/            # Deployment scripts
-│   └── docs/                   # Documentation
-├── 07-Speech-Service/
-│   ├── README.md
-│   ├── TROUBLESHOOTING.md      # Common issues and solutions
-│   ├── requirements.txt        # Python dependencies
-│   ├── .env.example           # Template for credentials
-│   ├── src/
-│   │   ├── speaking-clock.py   # File-based version
-│   │   ├── speaking-clock-mic.py # Microphone version
-│   │   ├── time.wav           # Sample input audio
-│   │   └── output.wav         # Generated speech
-│   └── venv/                  # Python virtual environment
-├── 08-Speech-Translation/
-│   ├── README.md
-│   ├── requirements.txt
-│   ├── .env.example
-│   ├── src/
-│   │   ├── station.wav        # "Where is the station?"
-│   │   ├── translator.py      # Interactive translator
-│   │   ├── simple-translator.py # Automated demo
-│   │   ├── translator-mic.py  # Microphone version
-│   │   └── translated_*.wav   # Generated translations
-│   └── venv/                  # Python virtual environment
-├── 09-Bicep-Loops/
-│   ├── README.md
-│   └── (Bicep files in parent directory)
-├── memory/                      # Learning progress tracking
-└── README.md                    # This file
+├── 01-fundamentals/             # Azure AI Services basics
+├── 02-computer-vision/          # Computer Vision services
+├── 03-natural-language/         # Language and Speech services
+│   ├── 05-Custom-Entity-Extraction/
+│   ├── 06-Translate-Text/
+│   ├── 07-Speech-Service/
+│   └── 08-Speech-Translation/
+├── 04-knowledge-mining/         # Cognitive Search implementations
+│   ├── custom-skills/
+│   ├── push-api/
+│   └── vector-search/
+├── 05-document-intelligence/    # Form processing and OCR
+│   └── doc-intelligence/
+├── 06-generative-ai/           # OpenAI and generative models
+│   └── semantic-kernel/
+├── 07-infrastructure/          # Infrastructure as Code
+│   ├── 07-Bicep-Infrastructure/
+│   ├── 09-Bicep-Loops/
+│   └── 10-Bicep-Modules/
+├── docs/                       # Additional documentation
+├── templates/                  # Project templates
+├── scripts/                    # Utility scripts
+├── LEARNING_PROGRESS.md        # Detailed progress tracker
+└── README.md                   # This file
 ```
+
+## 📚 Completed Modules
+
+### Natural Language Processing
+- ✅ **Custom Entity Extraction** - Built custom NER model for classified ads
+- ✅ **Text Translation** - Multi-language translation with 137 language support
+- ✅ **Speech Service** - Speech-to-text and text-to-speech implementation
+- ✅ **Speech Translation** - Real-time speech translation to multiple languages
+
+### Knowledge Mining
+- ✅ **Custom Skills** - Extended Azure Cognitive Search with custom skills
+- ✅ **Push API** - Implemented document indexing via Push API
+- ✅ **Vector Search** - Semantic search using embeddings
+
+### Document Intelligence
+- ✅ **Form Processing** - Extract structured data from documents
+
+### Infrastructure as Code
+- ✅ **Bicep Basics** - Parameterized Azure deployments
+- ✅ **Bicep Loops** - Multi-region deployments with loops
+- ✅ **Bicep Modules** - Reusable infrastructure components
 
 ## 🛠️ Technologies Used
 
-- **Azure AI Services**
-  - Azure AI Language
-  - Azure AI Translator
-- **Azure Infrastructure**
-  - Azure Bicep (Infrastructure as Code)
-  - Azure Resource Manager
-- **Programming Languages**
-  - Python 3.x
-  - Bicep DSL
-- **SDKs**
-  - azure-ai-textanalytics
-  - azure-ai-translation-text
-  - Azure CLI
+- **Azure AI Services**: Language, Speech, Translation, Document Intelligence
+- **Azure Infrastructure**: Bicep, ARM Templates, Resource Manager
+- **Programming Languages**: Python 3.x, Bicep DSL
+- **Development Tools**: VS Code, Azure CLI, Git
 
-## 📋 Upcoming Labs
+## 🎯 Learning Path
 
-- [ ] 01 - Get Started with Azure AI Services
-- [ ] 02 - Analyze Text
-- [ ] 03 - Question Answering
-- [ ] 04 - Text Classification
-- [ ] 07 - Speech Services
-- [ ] 08 - Speech Translation
-- [ ] 09 - Conversational AI
+Following the official [Microsoft AI-102: Azure AI Engineer](https://learn.microsoft.com/en-us/certifications/azure-ai-engineer/) certification path.
+
+## 📋 Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/aihearticu/Azure-AI-Learning-Hub.git
+   cd Azure-AI-Learning-Hub
+   ```
+
+2. **Environment Setup**
+   - Copy `.env.example` to `.env` in each module
+   - Add your Azure credentials
+   - Install dependencies: `pip install -r requirements.txt`
+
+3. **Azure Setup**
+   - Create Azure subscription or use free trial
+   - Set up required Azure services per module
 
 ## 🔗 Resources
 
-- [Microsoft Learn - AI Language](https://microsoftlearning.github.io/mslearn-ai-language/)
+- [Microsoft Learn - AI Engineer Path](https://learn.microsoft.com/en-us/training/paths/azure-ai-engineer/)
 - [Azure AI Services Documentation](https://docs.microsoft.com/azure/cognitive-services/)
+- [Azure Bicep Documentation](https://docs.microsoft.com/azure/azure-resource-manager/bicep/)
 
 ## 📝 Notes
 
-Each lab folder contains:
+Each module contains:
 - Detailed README with implementation notes
-- Source code with working examples
-- Troubleshooting guides for common issues
-- .env.example files for configuration reference
+- Working code examples
+- Troubleshooting guides
+- Configuration templates
 
 ---
 
-*This repository serves as a reference for Azure AI implementations and solutions to common challenges encountered during the learning process.*
+*This repository serves as a comprehensive reference for Azure AI implementations and solutions to common challenges encountered during the certification journey.*

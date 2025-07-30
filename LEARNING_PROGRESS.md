@@ -1,6 +1,6 @@
 # Azure AI Engineer Learning Progress
 
-## 📊 Overall Progress: 9/24 Modules Completed (37.5%)
+## 📊 Overall Progress: 10/24 Modules Completed (41.7%)
 
 ## 🎯 Learning Path: [AI-102: Azure AI Engineer](https://learn.microsoft.com/en-us/training/paths/azure-ai-engineer/)
 
@@ -45,6 +45,16 @@
   - Loop-based deployment to multiple regions
   - Variable loops for subnet configuration
   - Complex output structures with FQDNs
+
+### Module 10: Bicep Modules
+- **Date**: 2025-07-30
+- **Key Skills**: Modular Bicep design, Reusable components, Module dependencies
+- **Notable Achievement**: Created composable modules for App Service and CDN
+- **Implementation**: 
+  - Separate modules for app and CDN resources
+  - Conditional module deployment
+  - Inter-module dependencies via outputs
+  - Clean separation of concerns
 
 ## 📝 Key Learnings
 
