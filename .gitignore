@@ -50,6 +50,10 @@ output.wav
 translated_*.wav
 *.mp3
 
+# Image outputs from Computer Vision demos
+objects.jpg
+people.jpg
+
 # Business Solutions - PRIVATE
 Azure-Business-Solutions/
 **/Azure-Business-Solutions/

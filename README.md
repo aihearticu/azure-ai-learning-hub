@@ -1,10 +1,15 @@
-# Azure AI Learning Hub
+# Azure AI Learning Hub 🚀
 
 This repository contains hands-on implementations and documentation from the Microsoft Azure AI Engineer (AI-102) certification journey.
 
+## 📊 Current Status
+- **Active Module**: Computer Vision - Image Analysis ✨
+- **Latest Achievement**: Built real-time object detection with 82%+ accuracy
+- **Certification Target**: AI-102 (March 2025)
+
 ## 📈 Learning Progress
 
-**10 of 24 Modules Completed (41.7%)** - See [LEARNING_PROGRESS.md](./LEARNING_PROGRESS.md) for detailed tracking
+**11 of 24 Modules Completed (45.8%)** - See [AI_ENGINEER_LEARNING_PATH.md](./AI_ENGINEER_LEARNING_PATH.md) for detailed tracking
 
 ## 🚀 Repository Structure
 
@@ -37,6 +42,9 @@ Azure-AI-Learning-Modules/
 ```
 
 ## 📚 Completed Modules
+
+### Computer Vision
+- ✅ **Image Analysis** - Object detection, caption generation, people counting with Azure Computer Vision API
 
 ### Natural Language Processing
 - ✅ **Custom Entity Extraction** - Built custom NER model for classified ads

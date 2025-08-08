@@ -1,0 +1,15 @@
+# Azure AI Vision SDK
+azure-ai-vision-imageanalysis==1.0.0
+
+# Azure Core dependencies
+azure-core>=1.30.0
+azure-identity>=1.15.0
+
+# Utilities
+python-dotenv>=1.0.0
+Pillow>=10.0.0  # For image processing
+requests>=2.31.0  # For downloading images from URLs
+
+# Optional: For enhanced functionality
+numpy>=1.24.0  # For image array manipulation
+matplotlib>=3.7.0  # For displaying images with annotations
