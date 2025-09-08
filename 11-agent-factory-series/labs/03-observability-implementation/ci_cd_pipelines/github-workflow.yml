@@ -1,0 +1,84 @@
+
+name: Agent Quality Evaluation Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 */6 * * *'  # Run every 6 hours
+
+jobs:
+  evaluate-agent-quality:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+    
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install azure-ai-evaluation opentelemetry-azure-monitor
+    
+    - name: Run Agent Evaluation Suite
+      env:
+        AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+        AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+        AZURE_OPENAI_DEPLOYMENT_NAME: ${{ secrets.AZURE_OPENAI_DEPLOYMENT_NAME }}
+      run: |
+        python scripts/evaluate_agent.py --test-suite comprehensive
+    
+    - name: Check Quality Gates
+      run: |
+        python scripts/quality_gate_check.py --threshold 3.0
+    
+    - name: Compare with Baseline
+      run: |
+        python scripts/regression_detection.py --baseline main
+    
+    - name: Upload Evaluation Results
+      uses: actions/upload-artifact@v3
+      with:
+        name: evaluation-results
+        path: |
+          evaluation_results/*.json
+          evaluation_results/*.html
+    
+    - name: Post Results to PR
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const results = JSON.parse(fs.readFileSync('evaluation_results/summary.json'));
+          
+          const comment = `## 🤖 Agent Evaluation Results
+          
+          | Metric | Score | Status |
+          |--------|-------|--------|
+          | Intent Resolution | ${results.intent_resolution} | ${results.intent_status} |
+          | Tool Accuracy | ${results.tool_accuracy} | ${results.tool_status} |
+          | Task Adherence | ${results.task_adherence} | ${results.task_status} |
+          | Response Completeness | ${results.completeness} | ${results.completeness_status} |
+          
+          **Overall Score**: ${results.overall_score}/5.0 ${results.overall_status}`;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });

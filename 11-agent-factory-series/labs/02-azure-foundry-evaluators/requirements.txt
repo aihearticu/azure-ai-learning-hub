@@ -1,0 +1,7 @@
+# Azure AI Foundry Evaluators Lab Requirements
+azure-ai-evaluation>=1.0.0b1
+azure-identity>=1.15.0
+azure-core>=1.29.0
+python-dotenv>=1.0.0
+pandas>=1.5.0
+numpy>=1.21.0

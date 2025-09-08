@@ -1,0 +1,6 @@
+azure-identity
+azure-ai-projects
+azure-ai-agents>=1.0.0b1
+python-dotenv
+pandas
+matplotlib

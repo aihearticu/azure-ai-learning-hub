@@ -1,0 +1,6 @@
+azure-identity
+azure-ai-projects
+openai>=1.0.0
+python-dotenv
+numpy
+wave

@@ -1,0 +1,59 @@
+
+trigger:
+  branches:
+    include:
+      - main
+      - develop
+  paths:
+    include:
+      - src/agents/*
+      - tests/*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  pythonVersion: '3.9'
+  
+stages:
+- stage: Evaluate
+  displayName: 'Agent Quality Evaluation'
+  jobs:
+  - job: RunEvaluation
+    displayName: 'Run Agent Evaluations'
+    steps:
+    
+    - task: UsePythonVersion@0
+      inputs:
+        versionSpec: '$(pythonVersion)'
+      displayName: 'Use Python $(pythonVersion)'
+    
+    - script: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install azure-ai-evaluation
+      displayName: 'Install dependencies'
+    
+    - task: AzureCLI@2
+      inputs:
+        azureSubscription: 'Azure-AI-Connection'
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: |
+          export AZURE_OPENAI_ENDPOINT=$(az cognitiveservices account show --name $(openAIResource) --resource-group $(resourceGroup) --query endpoint -o tsv)
+          export AZURE_OPENAI_API_KEY=$(az cognitiveservices account keys list --name $(openAIResource) --resource-group $(resourceGroup) --query key1 -o tsv)
+          python scripts/evaluate_agent.py --comprehensive
+      displayName: 'Run Agent Evaluation'
+    
+    - task: PublishTestResults@2
+      inputs:
+        testResultsFormat: 'JUnit'
+        testResultsFiles: '**/evaluation-results.xml'
+        failTaskOnFailedTests: true
+      displayName: 'Publish evaluation results'
+    
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathToPublish: 'evaluation_results'
+        artifactName: 'evaluation-reports'
+      displayName: 'Publish evaluation artifacts'
